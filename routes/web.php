@@ -6,7 +6,7 @@ use App\Http\Controllers\OtpController;
 use App\Http\Controllers\MailboxController;
 
 // Nexus Hub
-Route::get('/nexus', fn() => view('index'))->name('nexus.hub');
+Route::get('/nexus', fn() => view('nexus.index'))->name('nexus.hub');
 
 // OTP — Phone
 Route::get('/otp/phone',   fn() => view('nexus.otp-phone'))->name('nexus.otp.phone');
