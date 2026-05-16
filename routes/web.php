@@ -5,16 +5,19 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\OtpController;
 use App\Http\Controllers\MailboxController;
 
+// Root redirects to Nexus Hub
+Route::get('/', fn() => redirect()->route('nexus.hub'));
+
 // Nexus Hub
 Route::get('/nexus', fn() => view('nexus.index'))->name('nexus.hub');
 
 // OTP — Phone
-Route::get('/otp/phone',   fn() => view('nexus.otp-phone'))->name('nexus.otp.phone');
-Route::post('/otp/phone',  [SmsController::class, 'sendSms'])->name('otp.phone.send');
+Route::get('/otp/phone',  fn() => view('nexus.otp-phone'))->name('nexus.otp.phone');
+Route::post('/otp/phone', [SmsController::class, 'sendSms'])->name('otp.phone.send');
 
 // OTP — Email
-Route::get('/otp/email',   fn() => view('nexus.otp-email'))->name('nexus.otp.email');
-Route::post('/otp/email',  [EmailController::class, 'sendEmail'])->name('otp.email.send');
+Route::get('/otp/email',  fn() => view('nexus.otp-email'))->name('nexus.otp.email');
+Route::post('/otp/email', [EmailController::class, 'sendEmail'])->name('otp.email.send');
 
 // OTP — Validate
 Route::get('/otp/verify',  [OtpController::class, 'showVerify'])->name('otp.verify');
