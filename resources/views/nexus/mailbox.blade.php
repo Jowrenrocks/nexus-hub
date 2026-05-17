@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nexus — Mailbox</title>
-  <link rel="stylesheet" href="{{ asset('nexus/styles.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
 </head>
 <body>
 
@@ -128,7 +128,7 @@
 <script>
   const SENT_FROM_SERVER = @json($sent);
 </script>
-<script src="{{ asset('nexus/app.js') }}"></script>
+<script src="{{ asset('assets/app.js') }}"></script>
 <script>
   loadMailbox();
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nexus — AI Chatbot</title>
-  <link rel="stylesheet" href="{{ asset('nexus/styles.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
 </head>
 <body>
 
@@ -74,7 +74,7 @@
   </main>
 </div>
 
-<script src="{{ asset('nexus/app.js') }}"></script>
+<script src="{{ asset('assets/app.js') }}"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     appendMessage("👋 Hello! I'm the Nexus AI assistant. I can help you with mailbox summaries, email composition, OTP verification info, and general questions. What can I do for you?", "bot");
